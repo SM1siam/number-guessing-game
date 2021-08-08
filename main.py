@@ -1,21 +1,20 @@
 import random
 
-n = int(random.randint(1, 3))
+n = random.randint(1, 3)
+a = input('I have a number in my mint. Can you guess it?. It is in between 1 and 3 :')
 run = True
-a = int(input('I have a number in my mind, can you guess it between 1 and 3? : '))
-if n == a:
-    print('correct!')
-    print('you guessed the number in 1 try.')
+count = 0
+if int(n) == int(a):
+    print('You got it right in 1 try')
     run = False
 else:
-    print('wrong, try again')
-count = 1
+    print('You are wrong')
+
 while run:
     count += 1
-    a = int(input('Type the number: '))
-    if n == a:
-        print('correct!')
-        print(f'You guessed the correct number in {count} try.')
+    a = input('Type the number : ')
+    if int(n) == int(a):
+        print(f'you got it right in {count} tires')
         run = False
     else:
-        print('wrong, try again ')
+        print('wrong, try again.')
